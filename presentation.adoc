@@ -97,6 +97,8 @@ steps:
 * Возможность динамически *создавать и удалять* тестовые стенды
 * Интеграция с мерж-реквестами
 
+== !
+
 image::gitlab_environments.png[]
 
 == Bonus: Windows Containers
