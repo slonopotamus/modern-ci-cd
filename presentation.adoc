@@ -16,25 +16,46 @@ v1.0, 2021-08-03
 . AppVeyor (2011), Travis CI (2011), Semaphore (2012), GitLab CI (2012)
 . Drone.io (2012), CircleCI (2017), GitHub Actions (2018)
 
-=== 1: Jenkins, Teamcity
+[.columns]
+=== Поколение 1
 
-* Настройка через UI
-* Installation-wide админские права
-* Непереносимость
-* Билды на хост-системе
+[.column]
+. Настройка через UI
+. Installation-wide админские права
+. Непереносимость
+. Билды на хост-системе
 
-=== 2: AppVeyor, Travis CI, GitLab CI
+[.column]
+* Jenkins
+* Teamcity
 
-* Дискавери репозиториев
-* Configuration as a code
-* Права на уровне репозиториев/проектов
-* Виртуализированные агенты
+[.columns]
+=== Поколение 2
 
-=== 3: CircleCI, GitHub Actions
+[.column]
+. Discovery репозиториев
+. Pipeline as a code
+. Per-project права
+. Виртуализированные агенты
 
-* Всё что есть во втором поколении
-* Локальный запуск билдов
-* Actions/Orbs: реюзабельные куски билд-пайплайна
+[.column]
+* AppVeyor
+* Travis CI
+* Semaphore
+* GitLab CI
+
+[.columns]
+=== Поколение 3
+
+[.column]
+. Всё что есть во втором поколении
+. Локальный запуск билдов
+. *Actions/Orbs: реюзабельные куски билд-пайплайна*
+
+[.column]
+* Drone.io
+* CircleCI
+* GitHub Actions
 
 == Actions
 
@@ -108,28 +129,24 @@ $ ue4-docker build 4.26.2
 
 == Continuous Deployment
 
-* Сервер: Kubernetes, Nomad
-* ПК: Steam, itch.io
-* Мобилки: Appetize.io
-
-=== !
-
 * Возможность динамически *создавать и удалять* тестовые стенды
 * Интеграция с мерж-реквестами
+* Часть пайплайна
 
-image::gitlab_environments.png[]
+image::review_apps.png[]
+
+=== Инструменты
+
+* Docker Registry
+* Kubernetes, Nomad
+* Steam, itch.io
+* Appetize.io
 
 == Bonus: Windows Containers
 
 * Сборка игры
 * Тесты
 * Включая рендер (https://docs.microsoft.com/en-us/windows/win32/direct3darticles/directx-warp[WARP])
-
-=== !
-
-image::win_in_win.png[]
-
-Положил Windows в Windows, чтобы запускать Windows пока я запускаю Windows
 
 === Изоляция
 
@@ -142,6 +159,12 @@ image::win_in_win.png[]
 * Windows Server vs Desktop
 * Windows 10 21H1
 * Windows 11
+
+=== !
+
+image::win_in_win.png[]
+
+Положил Windows в Windows, чтобы запускать Windows пока я запускаю Windows
 
 === Жизненный цикл
 
