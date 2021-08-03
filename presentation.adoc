@@ -3,7 +3,7 @@
 v1.0, 2021-08-03
 :source-highlighter: highlightjs
 :revealjs_hash: true
-:revealjs_theme: league
+:revealjs_theme: blood
 :revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@3.9.2
 :icons: font
 :imagesdir: images
@@ -13,8 +13,8 @@ v1.0, 2021-08-03
 == Поколения CI
 
 . Jenkins (2005), Teamcity (2006)
-. AppVeyor (2011), Travis CI (2011), GitLab CI (2015)
-. CircleCI (2017), GitHub Actions (2018)
+. AppVeyor (2011), Travis CI (2011), Semaphore (2012), GitLab CI (2012)
+. Drone.io (2012), CircleCI (2017), GitHub Actions (2018)
 
 === 1: Jenkins, Teamcity
 
@@ -83,6 +83,8 @@ steps:
     clangFormatVersion: 12
 ----
 
+=== Actions - библиотеки для CI
+
 == Контейнеры, виртуалки
 
 * Билд-агенты *одинаковые*
@@ -94,11 +96,21 @@ steps:
 
 image::naher.png[]
 
+=== ue4-docker
+
+image::ue4-docker.png[]
+
+[source,bash]
+----
+$ pip install ue4-docker
+$ ue4-docker build 4.26.2
+----
+
 == Continuous Deployment
 
-* Kubernetes, Nomad
-* Steam, itch.io
-* Appetize.io
+* Сервер: Kubernetes, Nomad
+* ПК: Steam, itch.io
+* Мобилки: Appetize.io
 
 === !
 
@@ -109,9 +121,9 @@ image::gitlab_environments.png[]
 
 == Bonus: Windows Containers
 
-* Сборка клиента игры
+* Сборка игры
 * Тесты
-* Включая рендер
+* Включая рендер (https://docs.microsoft.com/en-us/windows/win32/direct3darticles/directx-warp[WARP])
 
 === !
 
