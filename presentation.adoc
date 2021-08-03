@@ -89,19 +89,31 @@ steps:
 * Отмена билдов
 * Установка софта
 * Autoscaling
-* MacOS? Ну да, ну да, пошел я нахер
+
+=== MacOS
+
+image::naher.png[]
 
 == Continuous Deployment
 
 * Kubernetes, Nomad
+* Steam, itch.io
+* Appetize.io
+
+=== !
+
 * Возможность динамически *создавать и удалять* тестовые стенды
 * Интеграция с мерж-реквестами
-
-== !
 
 image::gitlab_environments.png[]
 
 == Bonus: Windows Containers
+
+* Сборка клиента игры
+* Тесты
+* Включая рендер
+
+=== !
 
 image::win_in_win.png[]
 
